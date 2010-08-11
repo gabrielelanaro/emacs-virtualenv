@@ -4,7 +4,7 @@
 
 ;; Author: Gabriele Lanaro <gabriele.lanaro@gmail.com>
 ;; Version: 0.1
-;; Url: 
+;; Url: http://github.com/gabrielelanaro/emacs-starter-kit
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -23,7 +23,25 @@
 
 ;;; Commentary:
 
-;; 
+;; The installation is fairly easy, you have the load option, put this
+;; in your .emacs:
+
+;; (load-file "/path/to/virtualenv.el")
+;;
+;; Otherwise you can do it with the load path:
+
+;; (add-to-list 'load-path "Path/to/virtualenv.el/containing/directory/"
+;; (require 'virtualenv)
+
+;; The usage is very intuitive, to activate a virtualenv use
+
+;; M-x virtualenv-activate
+
+;; It will prompt you for the virtual environment path.
+;; If you want to deactivate a virtual environment, use:
+
+;; M-x virtualenv-deactivate
+
 
 (setq virtualenv-workon-home (getenv "WORKON_HOME"))
 
